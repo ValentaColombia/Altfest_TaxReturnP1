@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Edge Login  Practifi",
+  "Type": "App",
+  "Id": "xpgIbiLssk2gB5LKSB3qIQ",
+  "Reference": "7jPtXh5mXUKBSkNqdCyr8w/xpgIbiLssk2gB5LKSB3qIQ",
+  "Created": "2026-06-02T16:50:20.8802664Z",
+  "Updated": "2026-06-02T16:50:20.8802664Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

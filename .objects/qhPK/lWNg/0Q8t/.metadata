@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Dashboard – Xero",
+  "Type": "Screen",
+  "Id": "0Q8tAlpmx0W1RafgQKcdLQ",
+  "Reference": "7jPtXh5mXUKBSkNqdCyr8w/0Q8tAlpmx0W1RafgQKcdLQ",
+  "ParentRef": "7jPtXh5mXUKBSkNqdCyr8w/lWNg8l1o_kS_Wg_2e6DkCw",
+  "Created": "2026-06-02T22:32:47.9752058Z",
+  "Updated": "2026-06-02T22:32:47.9752058Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

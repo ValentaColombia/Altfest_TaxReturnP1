@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="D2PJhVWn00u1RFcSykdZyA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practifi.cloudforce.com" CVScreenId="28fd9d8c-d003-4a98-b48d-ae9b409e8222" DesignTimeRectangle="321, 409, 338, 43" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='username' tag='INPUT' aaname='Username' type='email' /&gt;" Guid="36cf640f-518b-483d-994d-5574ad3cc1a1" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login | Practifi' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="28fd9d8c-d003-4a98-b48d-ae9b409e8222" DesignTimeRectangle="321, 386, 57, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' aaname='Username' /&gt;" Guid="80803632-d506-4e21-b09c-d36c264b1559" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d1d806c62e43beb227ece4390579c733.png" xmlns="">0-5XSVy1v5Eq7cMB_WRaIWA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

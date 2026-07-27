@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="7QEBel34VUqcISpPX4ELfw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="c0a04b4a-399b-4d8f-9b18-88fdf50bff00" DesignTimeRectangle="747, 489, 88, 26" ElementType="Button" FullSelectorArgument="&lt;wnd title='&amp;amp;Save' aaname='Save' cls='Button' /&gt;" Guid="71a84eea-ab9c-4e2b-95a7-1413c76d66e0" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="ca334bf0b9f539d4e17802ce204a5f7a.png" xmlns="">060Sl8U8Ma0GAKsFHOCzmWw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="eCbvTfznEEGUW3xQDVZyuQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practifi-1692.my.salesforce.com/_ui/identity/verification/method/TotpVerificationUi/e" CVScreenId="63cccc9d-13ea-419f-8bd6-1e5fdd83e41b" DesignTimeRectangle="799, 687, 338, 43" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='INPUT' aaname='Verify' type='submit' /&gt;" Guid="0fbb1034-7b65-40dc-a639-8c271940bdce" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Verify Your Identity | Practifi' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="a72fc9e1ddbbd7b1f9f74d560c34cdb3.png" xmlns="">0G3O2ZoPEdkKc3T7TisIlUg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

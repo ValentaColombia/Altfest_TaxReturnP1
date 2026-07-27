@@ -1,0 +1,417 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Practifi_ExportReportFile" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <this:Practifi_ExportReportFile.in_Config>
+    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
+  </this:Practifi_ExportReportFile.in_Config>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>Practifi_ExportReportFile_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Practifi_ExportReportFile" sap:VirtualizedContainerService.HintSize="1346,803.04" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Login  Practifi" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="450,314" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="dbec2c42-cd68-48d7-858c-fdbdf0a94cd0" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1469" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="382,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[in_Config(&quot;Altfest_PractifiReportUrl&quot;).ToString.Trim]" Version="V5" />
+            <Delay Duration="00:00:15" sap:VirtualizedContainerService.HintSize="382,122" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Refresh'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dbec2c42-cd68-48d7-858c-fdbdf0a94cd0" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="8f942c5f-e498-4451-809a-8926bd60fa5b" DesignTimeRectangle="12, 179, 0, 0" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Refresh' tag='BUTTON' type='button' /&gt;" Guid="26b986b8-f8d9-40ab-ab63-d6d58f426cc9" InformativeScreenshot="e9acd7b0555d31b17e05589c23496b1f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Referenced Doc Reporting (Tax &amp;amp; ARF) | Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dbec2c42-cd68-48d7-858c-fdbdf0a94cd0" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="4729a79b-004b-4c16-8103-920290077697" ContentHash="CG5LI7D_RESm3aCccMch4Q" DesignTimeRectangle="1875, 190, 32, 32" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='More Actions - Edit' tag='BUTTON' type='button' /&gt;" Guid="c978ef97-816b-4653-b4a7-efcde526d74a" InformativeScreenshot="8dbdde9993a2465115ce65e2a4145461.png" Reference="7jPtXh5mXUKBSkNqdCyr8w/pz-ak_rFlEyISlNrAREK7Q" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Referenced Doc Reporting (Tax &amp;amp; ARF) | Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="4729a79b-004b-4c16-8103-920290077697" DesignTimeRectangle="1821, 190, 55, 32" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Edit' tag='BUTTON' type='button' /&gt;" Guid="5f6686fc-b4db-4f80-9629-67055d7220bc" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Export(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dbec2c42-cd68-48d7-858c-fdbdf0a94cd0" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="92539fc5-356b-4463-ba7d-e05eb09e9092" ContentHash="8aT9VAAAn06gL1C-bgNUWQ" DesignTimeRectangle="1797, 339, 35, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Export' tag='SPAN' /&gt;" Guid="dad856c5-c4b6-4104-ba67-7e5b285f426a" InformativeScreenshot="cb7db95969768d3af1fca2813e43adce.png" Reference="7jPtXh5mXUKBSkNqdCyr8w/lDA1_7ab9EGiIRyAX3OVCA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Referenced Doc Reporting (Tax &amp;amp; ARF) | Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,240" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'BUTTON'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="Export" ScopeIdentifier="e536bce6-39b2-4d32-832b-0809fc6f01a6" Version="V5">
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="6">
+                        <x:String>Save As</x:String>
+                        <x:String>Save</x:String>
+                        <x:String>Subscribe</x:String>
+                        <x:String>Export</x:String>
+                        <x:String>Delete</x:String>
+                        <x:String>Add to Dashboard</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="8f942c5f-e498-4451-809a-8926bd60fa5b" DesignTimeRectangle="1875, 190, 32, 32" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='More Actions - Edit' tag='BUTTON' type='button' /&gt;" Guid="92489708-7007-4312-80e8-541260311a83" ImageBase64="" InformativeScreenshot="ad5fa0b0ffd3f17118cfa43083dc4c45.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Referenced Doc Reporting (Tax &amp;amp; ARF) | Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="8f942c5f-e498-4451-809a-8926bd60fa5b" DesignTimeRectangle="1821, 190, 55, 32" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Edit' tag='BUTTON' type='button' /&gt;" Guid="8724d937-5737-4120-ac0f-00ad2081dacf" SearchSteps="Selector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Formatted Report'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dbec2c42-cd68-48d7-858c-fdbdf0a94cd0" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="4a463a2a-c062-4370-a54b-0000db000700" DesignTimeRectangle="677, 468, 190, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Formatted Report' tag='SPAN' /&gt;" Guid="2e7f7926-160d-4ee7-8b06-8530cd83ce43" InformativeScreenshot="fb1dedc273da5577b993c150ae247b46.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Referenced Doc Reporting (Tax &amp;amp; ARF) | Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Export'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,216" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dbec2c42-cd68-48d7-858c-fdbdf0a94cd0" Version="V5">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="4a463a2a-c062-4370-a54b-0000db000700" DesignTimeRectangle="1210, 736, 37, 30" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='SPAN' aaname='Export' /&gt;" Guid="4ede6979-62a1-4ed6-b721-6a44f5a565ab" InformativeScreenshot="2a9cd3ede52088fc6ec88c7598d57ce6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJNSURBVFhH7ZY/aBRBFMY/kRAOCUEkSBAREREJIhZiIUHESiysrC3EwkKCiIiIiIVYBisL98MqSEoREbEQEREREbGS94mVWKWwEBGLkzc7l9zNTjYXcnvXpPg1O292vnnz/qHdbm8ZJUg/DJtNAasKAG0rqG2gtoOaBNXyb6ndRqkIAOUHT4J2GNR5UHdA3QbtHKhDvtZrpz2g9oHaDdoECq1LZI+A8ta2F9QVUF9BtVewf6C+gJoDtR/UUVDXQD0D9QnUE1CXQR1xz6UHrUYiQDtBPeg9uMISaK9Bfc6sOe9BnY3PNwFqOuLeqnhnWQCo8dLN9ifz0/XiAi+AugRqHrT56LnZ8pIrsdQtwIPtaeZng8RA3QV1oOONbgHu/qXMpiZ45MGbE/A7Y9wUN0CNdQvYEaM5NWyGIjzHdBAQi46n1tuKYbOciQKC+++D+pUxapKrKCuaebr8zRg0zZwLGAf1MbM4DE64gBaKkdz+OwpNAbRWZnEYXA9pGJ/gR8agQeyxd8+QAEFFmQEZw0Fj30DdAzXTadudNJwB9a66YYMU5r1lAbSHoG6COh1TvrcZxeHiOGgLA+sHRWhss6B5gfMZwyttXTsO1dAnm1NxEnLFHyo/rvIT1AtQr+KM8AbULVA+UbXSA1PyI1nh85+mYk9faz7wgDoG6mA81J8ze9scFQGJGJ9k/DbVLClrx/NQTKixdG+/1Aso3Bvmg8rJcrLRyxisi6Auxga2ppvrqBWwbFSmqrt1FwqffkMk+8zXl5vr6EtAk2wKGLmA/3gNTn9qqGsgAAAAAElFTkSuQmCC" InformativeScreenshot="20b853453b3e926fc4b265c4f5fab88b.jpg" Selector="&lt;html app='msedge.exe' url='https://practifi-1692.lightning.force.com/*' /&gt;" Url="https://practifi-1692.lightning.force.com/*" Version="V1" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,325" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Referenced Doc Reporting (Tax &amp; ARF)  Sa" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="450,265" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="e536bce6-39b2-4d32-832b-0809fc6f01a6" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGoToUrl DisplayName="Go To URL - " sap:VirtualizedContainerService.HintSize="382,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[in_Config(&quot;Altfest_PractifiReportUrl&quot;).ToString.Trim]" Version="V5" />
+                  <Delay Duration="00:00:15" sap:VirtualizedContainerService.HintSize="382,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Refresh'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e536bce6-39b2-4d32-832b-0809fc6f01a6" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="8f942c5f-e498-4451-809a-8926bd60fa5b" DesignTimeRectangle="12, 179, 0, 0" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Refresh' tag='BUTTON' type='button' /&gt;" Guid="26b986b8-f8d9-40ab-ab63-d6d58f426cc9" InformativeScreenshot="e9acd7b0555d31b17e05589c23496b1f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Referenced Doc Reporting (Tax &amp;amp; ARF) | Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BUTTON'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e536bce6-39b2-4d32-832b-0809fc6f01a6" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="4729a79b-004b-4c16-8103-920290077697" ContentHash="CG5LI7D_RESm3aCccMch4Q" DesignTimeRectangle="1875, 190, 32, 32" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='More Actions - Edit' tag='BUTTON' type='button' /&gt;" Guid="c978ef97-816b-4653-b4a7-efcde526d74a" InformativeScreenshot="8dbdde9993a2465115ce65e2a4145461.png" Reference="7jPtXh5mXUKBSkNqdCyr8w/pz-ak_rFlEyISlNrAREK7Q" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Referenced Doc Reporting (Tax &amp;amp; ARF) | Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="4729a79b-004b-4c16-8103-920290077697" DesignTimeRectangle="1821, 190, 55, 32" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Edit' tag='BUTTON' type='button' /&gt;" Guid="5f6686fc-b4db-4f80-9629-67055d7220bc" SearchSteps="Selector" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Export(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e536bce6-39b2-4d32-832b-0809fc6f01a6" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="92539fc5-356b-4463-ba7d-e05eb09e9092" ContentHash="8aT9VAAAn06gL1C-bgNUWQ" DesignTimeRectangle="1797, 339, 35, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Export' tag='SPAN' /&gt;" Guid="dad856c5-c4b6-4104-ba67-7e5b285f426a" InformativeScreenshot="cb7db95969768d3af1fca2813e43adce.png" Reference="7jPtXh5mXUKBSkNqdCyr8w/lDA1_7ab9EGiIRyAX3OVCA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Referenced Doc Reporting (Tax &amp;amp; ARF) | Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut.Body>
+                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,240" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NSelectItem DisplayName="Select Item 'BUTTON'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,180" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Export" ScopeIdentifier="e536bce6-39b2-4d32-832b-0809fc6f01a6" Version="V5">
+                          <uix:NSelectItem.Items>
+                            <scg:List x:TypeArguments="x:String" Capacity="6">
+                              <x:String>Save As</x:String>
+                              <x:String>Save</x:String>
+                              <x:String>Subscribe</x:String>
+                              <x:String>Export</x:String>
+                              <x:String>Delete</x:String>
+                              <x:String>Add to Dashboard</x:String>
+                            </scg:List>
+                          </uix:NSelectItem.Items>
+                          <uix:NSelectItem.Target>
+                            <uix:TargetAnchorable BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="8f942c5f-e498-4451-809a-8926bd60fa5b" DesignTimeRectangle="1875, 190, 32, 32" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='More Actions - Edit' tag='BUTTON' type='button' /&gt;" Guid="92489708-7007-4312-80e8-541260311a83" ImageBase64="" InformativeScreenshot="ad5fa0b0ffd3f17118cfa43083dc4c45.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Referenced Doc Reporting (Tax &amp;amp; ARF) | Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="8f942c5f-e498-4451-809a-8926bd60fa5b" DesignTimeRectangle="1821, 190, 55, 32" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Edit' tag='BUTTON' type='button' /&gt;" Guid="8724d937-5737-4120-ac0f-00ad2081dacf" SearchSteps="Selector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NSelectItem.Target>
+                        </uix:NSelectItem>
+                      </Sequence>
+                    </ui:CommentOut.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:CommentOut>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Formatted Report'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e536bce6-39b2-4d32-832b-0809fc6f01a6" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="4a463a2a-c062-4370-a54b-0000db000700" DesignTimeRectangle="677, 468, 190, 36" ElementType="Text" FullSelectorArgument="&lt;webctrl aaname='Formatted Report' tag='SPAN' /&gt;" Guid="2e7f7926-160d-4ee7-8b06-8530cd83ce43" InformativeScreenshot="fb1dedc273da5577b993c150ae247b46.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Referenced Doc Reporting (Tax &amp;amp; ARF) | Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Export'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="382,218" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e536bce6-39b2-4d32-832b-0809fc6f01a6" Version="V5">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="4a463a2a-c062-4370-a54b-0000db000700" DesignTimeRectangle="1193, 735, 71, 32" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='button' aaname='Export' /&gt;" Guid="4ede6979-62a1-4ed6-b721-6a44f5a565ab" InformativeScreenshot="be4c97ae57bdbc93adecba489af9f1b3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Referenced Doc Reporting (Tax &amp;amp; ARF) | Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJNSURBVFhH7ZY/aBRBFMY/kRAOCUEkSBAREREJIhZiIUHESiysrC3EwkKCiIiIiIVYBisL98MqSEoREbEQEREREbGS94mVWKWwEBGLkzc7l9zNTjYXcnvXpPg1O292vnnz/qHdbm8ZJUg/DJtNAasKAG0rqG2gtoOaBNXyb6ndRqkIAOUHT4J2GNR5UHdA3QbtHKhDvtZrpz2g9oHaDdoECq1LZI+A8ta2F9QVUF9BtVewf6C+gJoDtR/UUVDXQD0D9QnUE1CXQR1xz6UHrUYiQDtBPeg9uMISaK9Bfc6sOe9BnY3PNwFqOuLeqnhnWQCo8dLN9ifz0/XiAi+AugRqHrT56LnZ8pIrsdQtwIPtaeZng8RA3QV1oOONbgHu/qXMpiZ45MGbE/A7Y9wUN0CNdQvYEaM5NWyGIjzHdBAQi46n1tuKYbOciQKC+++D+pUxapKrKCuaebr8zRg0zZwLGAf1MbM4DE64gBaKkdz+OwpNAbRWZnEYXA9pGJ/gR8agQeyxd8+QAEFFmQEZw0Fj30DdAzXTadudNJwB9a66YYMU5r1lAbSHoG6COh1TvrcZxeHiOGgLA+sHRWhss6B5gfMZwyttXTsO1dAnm1NxEnLFHyo/rvIT1AtQr+KM8AbULVA+UbXSA1PyI1nh85+mYk9faz7wgDoG6mA81J8ze9scFQGJGJ9k/DbVLClrx/NQTKixdG+/1Aso3Bvmg8rJcrLRyxisi6Auxga2ppvrqBWwbFSmqrt1FwqffkMk+8zXl5vr6EtAk2wKGLmA/3gNTn9qqGsgAAAAAElFTkSuQmCC" InformativeScreenshot="1cd7fb9943e5dfe72634ab7f4c51201b.jpg" Selector="&lt;html app='msedge.exe' title='Amy Gifford | Person | Salesforce' /&gt;" Url="https://practifi-1692.lightning.force.com/*" Version="V2" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

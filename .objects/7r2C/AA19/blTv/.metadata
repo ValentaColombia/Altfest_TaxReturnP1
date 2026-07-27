@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Referenced Doc Reporting (Tax & ARF)  Sa(1)",
+  "Type": "Screen",
+  "Id": "blTv3oRLsESPpDYfdgwG2w",
+  "Reference": "7jPtXh5mXUKBSkNqdCyr8w/blTv3oRLsESPpDYfdgwG2w",
+  "ParentRef": "7jPtXh5mXUKBSkNqdCyr8w/AA1991RSokKNJhMlB3JjwQ",
+  "Created": "2026-06-16T03:56:20.2587048Z",
+  "Updated": "2026-06-16T03:56:20.2587048Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

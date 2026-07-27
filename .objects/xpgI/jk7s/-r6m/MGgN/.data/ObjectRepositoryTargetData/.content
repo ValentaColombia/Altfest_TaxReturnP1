@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="TD-IOh5bfEeOUuHlaKBwXg" Reference="7jPtXh5mXUKBSkNqdCyr8w/MGgNppwH50iMqy2hxE33tw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practifi.cloudforce.com" CVScreenId="5d7ede91-1e60-4b67-81ae-fd6789d5d5e3" DesignTimeRectangle="321, 491, 338, 43" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' aaname='Password' type='password' /&gt;" Guid="517ce8e8-a0fd-4237-a05f-2794797fb187" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login | Practifi' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="5d7ede91-1e60-4b67-81ae-fd6789d5d5e3" DesignTimeRectangle="321, 468, 52, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='login_form' tag='LABEL' aaname='Password' /&gt;" Guid="bc00900f-4fa4-4e12-b492-3fd3092544ad" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1023341253311e425d554b32827caaa0.png" xmlns="">0QEfXQSrGr0iTUUPtrC3d0g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

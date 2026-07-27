@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="oJ9SteBnmU-zSnbFXg2AEA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practifi-1692.my.salesforce.com/_ui/identity/verification/method/TotpVerificationUi/e" CVScreenId="9f1ee801-683b-43b3-9cc4-cff9ea9cb388" DesignTimeRectangle="22, 60, 223, 48" FullSelectorArgument="[string.Format(&quot;&lt;ctrl name='Authenticator' role='document' /&gt;&lt;ctrl name='*{0}' role='push button' /&gt;&lt;ctrl idx='2' role='grouping' /&gt;&quot;, in_XeroLoginUsername)]" Guid="0bfcb28c-9395-4f8a-b65a-6d52c297915f" ImageBase64="" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_2' idx='*' /&gt;" SearchSteps="Selector" SelectionStrategy="AA" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="c888aae9bff22e4736c0f0c5285a3add.png" xmlns="">0NHBQ4KAZPUOyIFMPoua5aA</imageRef>
+    </TargetAnchorable>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1">
+      <ObjectRepositoryVariableData IsVariable="False" Name="in_XeroLoginUsername" />
+    </scg:List>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

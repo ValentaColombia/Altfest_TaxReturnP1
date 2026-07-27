@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Login  Practifi",
+  "Type": "Screen",
+  "Id": "-r6mTbM-g0S_pEPJ-0dL3g",
+  "Reference": "7jPtXh5mXUKBSkNqdCyr8w/-r6mTbM-g0S_pEPJ-0dL3g",
+  "ParentRef": "7jPtXh5mXUKBSkNqdCyr8w/jk7sMNYjhUWhaZPlUpRM1w",
+  "Created": "2026-06-02T16:50:21.2237826Z",
+  "Updated": "2026-06-02T16:50:21.2237826Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Krw-GAI_zUW5xYCoUEKZxA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practifi.cloudforce.com" CVScreenId="bb67bb92-1433-45e6-b0c2-f6569d1ba49a" DesignTimeRectangle="321, 550, 338, 43" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl id='Login' tag='INPUT' aaname='Log In' type='submit' /&gt;" Guid="178e6ba3-45af-4c2c-95f6-a590fc97e613" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login | Practifi' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="df7c26705b6194835527dc172c9f308f.png" xmlns="">0vjAE5eG6K0qrzo5_bswGxg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

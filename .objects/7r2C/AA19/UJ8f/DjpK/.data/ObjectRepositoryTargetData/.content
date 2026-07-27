@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="yRNv9_F0akW4yDFheh9RgA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="8f942c5f-e498-4451-809a-8926bd60fa5b" DesignTimeRectangle="1875, 190, 32, 32" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='More Actions - Edit' tag='BUTTON' type='button' /&gt;" Guid="92489708-7007-4312-80e8-541260311a83" ImageBase64="" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Referenced Doc Reporting (Tax &amp;amp; ARF) | Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="8f942c5f-e498-4451-809a-8926bd60fa5b" DesignTimeRectangle="1821, 190, 55, 32" ElementType="Button" FullSelectorArgument="&lt;webctrl aaname='Edit' tag='BUTTON' type='button' /&gt;" Guid="8724d937-5737-4120-ac0f-00ad2081dacf" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="ad5fa0b0ffd3f17118cfa43083dc4c45.png" xmlns="">0cpA9zHeaukaXKFYbrGNCSg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

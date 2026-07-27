@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="sy0YaHEkOE6GfZSEZuUbkA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practifi-1692.my.salesforce.com/_ui/identity/verification/method/TotpVerificationUi/e" CVScreenId="ced0ed9d-adf6-4a20-a51f-4cd573936f2b" DesignTimeRectangle="799, 628, 338, 43" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' aaname='Verification Code' type='text' /&gt;" Guid="b1577ba5-0c2f-408b-89f1-ad1b85cc3cad" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Verify Your Identity | Practifi' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="ced0ed9d-adf6-4a20-a51f-4cd573936f2b" DesignTimeRectangle="799, 605, 95, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' aaname='Verification Code' /&gt;" Guid="9d7be0fc-5e7c-47d9-bb43-ac9ceef286a5" SearchSteps="Selector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="72cdfaf4011e7014cd1fe9f804bd5c71.png" xmlns="">0aHHMam-XPk-fvNA5Tffc2A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="2nojb5_px06AdSPWxdasbA" Reference="7jPtXh5mXUKBSkNqdCyr8w/vun6KQJtQUS9h1lkWXBUXw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="5dc659e7-7886-4d78-a0ad-8ad7c30866ba" DesignTimeRectangle="1872, 133, 32, 30" FullSelectorArgument="&lt;webctrl tag='SPAN' class='uiImage' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;header&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;span&amp;gt;div&amp;gt;button&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;span' /&gt;" Guid="6783d66f-fd79-4b0d-b435-427e713af90b" ImageBase64="" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="4949b1aec89ae2922eb28c569a18044d.png" xmlns="">00cn-NkXVmUO-Iy8X7d03VA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

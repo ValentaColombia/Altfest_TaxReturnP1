@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Excel File Name",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "4rsFiBL5ikucKq7nvzG9_g",
+  "Reference": "7jPtXh5mXUKBSkNqdCyr8w/4rsFiBL5ikucKq7nvzG9_g",
+  "ParentRef": "7jPtXh5mXUKBSkNqdCyr8w/SR0HCUrWkEiPPLQzS_Ivww",
+  "Created": "2026-06-09T19:01:40.9606237Z",
+  "Updated": "2026-06-09T19:01:40.9606237Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

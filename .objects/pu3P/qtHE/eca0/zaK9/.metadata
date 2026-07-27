@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Verification Code",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "zaK9z5pr_ESjYmq2NvMuZg",
+  "Reference": "7jPtXh5mXUKBSkNqdCyr8w/zaK9z5pr_ESjYmq2NvMuZg",
+  "ParentRef": "7jPtXh5mXUKBSkNqdCyr8w/eca0tMIXu0yZlFsWSYVggg",
+  "Created": "2026-06-02T22:22:47.2569881Z",
+  "Updated": "2026-06-02T22:22:47.2569881Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.10.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

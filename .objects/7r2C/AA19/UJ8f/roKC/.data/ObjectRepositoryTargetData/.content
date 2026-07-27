@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="DYKpNmpQI0Kr-G7Jtyok9g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="4a463a2a-c062-4370-a54b-0000db000700" DesignTimeRectangle="1193, 735, 71, 32" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='button' aaname='Export' /&gt;" Guid="4ede6979-62a1-4ed6-b721-6a44f5a565ab" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Referenced Doc Reporting (Tax &amp;amp; ARF) | Salesforce' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="be4c97ae57bdbc93adecba489af9f1b3.png" xmlns="">0iAnwnkcLOU6boJ3ApGxUng</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
