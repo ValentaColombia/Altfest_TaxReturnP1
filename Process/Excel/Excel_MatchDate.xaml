@@ -190,7 +190,7 @@
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Excel_MatchDate" sap:VirtualizedContainerService.HintSize="1421,4590" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Excel_MatchDate" sap:VirtualizedContainerService.HintSize="1089,4590" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Filtered" />
       <Variable x:TypeArguments="x:String" Name="List1Json" />
@@ -298,8 +298,8 @@
       <Assign.Value>
         <InArgument x:TypeArguments="x:String" xml:space="preserve">[JsonConvert.SerializeObject(New With {
     .list_1 = dt_Filtered.AsEnumerable().Select(Function(row) New With {
-        .id = row("Column4").ToString(),
-        .name = row("Column4").ToString(),
+        .id = row("Column3").ToString(),
+        .name = row("Column3").ToString(),
 		.index = row("Index").ToString(),
 		.date= row("Tax Planning").ToString()
     }).ToList(),

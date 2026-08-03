@@ -182,9 +182,13 @@
       <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
       <AssemblyReference>ExtendedExtractionRe.1Hlfw30eSiN1eLbILaNL6W1</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Excel_MarkMatches" sap:VirtualizedContainerService.HintSize="1421,3313" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Excel_MarkMatches" sap:VirtualizedContainerService.HintSize="1089,3506" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="mg:DriveItem" Name="MasterFileDriveItem" />
     </Sequence.Variables>
@@ -193,7 +197,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Excel_MatchDate" sap:VirtualizedContainerService.HintSize="740,3290" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Excel_MatchDate" sap:VirtualizedContainerService.HintSize="740,3483" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="List1Json" />
         <Variable x:TypeArguments="x:String" Name="dataJson" />
@@ -212,6 +216,25 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_ApiKeyAssetName]" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[in_OrchestratorQueueFolder]" sap:VirtualizedContainerService.HintSize="706,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[ApiKeySecure]" Username="[ApiEndPoint]" />
+      <ui:FilterDataTable DataTable="[in_dt_MasterData]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="706,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[in_dt_MasterData]" SelectColumnsMode="Remove">
+        <ui:FilterDataTable.Filters>
+          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+            <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
+              <ui:FilterOperationArgument.Column>
+                <InArgument x:TypeArguments="x:String">["Column44"]</InArgument>
+              </ui:FilterOperationArgument.Column>
+              <ui:FilterOperationArgument.Operand>
+                <InArgument x:TypeArguments="x:String">["Yes"]</InArgument>
+              </ui:FilterOperationArgument.Operand>
+            </ui:FilterOperationArgument>
+          </scg:List>
+        </ui:FilterDataTable.Filters>
+        <ui:FilterDataTable.SelectColumns>
+          <scg:List x:TypeArguments="InArgument" Capacity="4">
+            <x:Null />
+          </scg:List>
+        </ui:FilterDataTable.SelectColumns>
+      </ui:FilterDataTable>
       <ui:ReadTextFile File="{x:Null}" Content="[jsonTemplate]" DisplayName="Read Text File" FileName="[in_MatchesPromptFilePath]" sap:VirtualizedContainerService.HintSize="706,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
       <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="706,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
         <ui:CommentOut.Body>
@@ -321,8 +344,8 @@
 		.index = row("Index").ToString()
     }).ToList(),
     .list_2 = in_dt_MasterData.AsEnumerable().Select(Function(row) New With {
-        .id = row("Column4").ToString(),
-        .name = row("Column4").ToString(),
+        .id = row("Column3").ToString(),
+        .name = row("Column3").ToString(),
 		.index = row("Index").ToString()
     }).ToList()
 })]</InArgument>
@@ -344,7 +367,7 @@
           <InArgument x:TypeArguments="x:String">[jsonTemplate.Replace("{{DATA_JSON}}", escapedDataJson)]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" Body="[jsonFinal]" BodyFormat="application/xml" DisplayName="Http client" EnableSSLVerification="True" EndPoint="[ApiEndPoint]" sap:VirtualizedContainerService.HintSize="706,102" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[Response]" TimeoutMS="600000">
+      <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" Body="[jsonFinal]" BodyFormat="application/xml" DisplayName="Http client" EnableSSLVerification="True" EndPoint="[ApiEndPoint]" sap:VirtualizedContainerService.HintSize="706,102" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[Response]" TimeoutMS="60000000">
         <ui:HttpClient.Attachments>
           <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
         </ui:HttpClient.Attachments>
