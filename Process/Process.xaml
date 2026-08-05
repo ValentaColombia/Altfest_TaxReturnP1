@@ -136,7 +136,7 @@
       <AssemblyReference>ExtendedExtractionRe.1Hlfw30eSiN1eLbILaNL6W1</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1089,2914" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1250,4663" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_OutputData" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_FinalOutputData" />
@@ -151,15 +151,15 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="570,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel_AddTemplateSheet - Invoke Workflow File (Process\Excel\Excel_AddTemplateSheet.xaml)" sap:VirtualizedContainerService.HintSize="570,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Process\Excel\Excel_AddTemplateSheet.xaml">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="575,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel_AddTemplateSheet - Invoke Workflow File (Process\Excel\Excel_AddTemplateSheet.xaml)" sap:VirtualizedContainerService.HintSize="575,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Process\Excel\Excel_AddTemplateSheet.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_OutputFilePath">[in_Config("OutputFilePath").ToString.Trim]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_TemplateFilePath">[in_Config("OutputTemplatePath").ToString.Trim]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_SheetNameToCopy">[in_Config("OutputTemplateSheet").ToString.Trim]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel_ReadInputFile - Invoke Workflow File (Process\Excel\Excel_ReadInputFile.xaml)" sap:VirtualizedContainerService.HintSize="570,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Process\Excel\Excel_ReadInputFile.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel_ReadInputFile - Invoke Workflow File (Process\Excel\Excel_ReadInputFile.xaml)" sap:VirtualizedContainerService.HintSize="575,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Process\Excel\Excel_ReadInputFile.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_OutputFileSheet">[in_Config("OutputFileSheet").ToString]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_InputFilePath">[in_Config("OutputFilePath").ToString]</InArgument>
@@ -172,7 +172,7 @@
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Assign sap:VirtualizedContainerService.HintSize="570,115" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="575,114" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[dt_NotFound]</OutArgument>
       </Assign.To>
@@ -180,7 +180,7 @@
         <InArgument x:TypeArguments="sd:DataTable">[dt_FinalOutputData.Clone()]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel_MatchDate - Invoke Workflow File (Process\Excel\Excel_MatchDate.xaml)" sap:VirtualizedContainerService.HintSize="570,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Process\Excel\Excel_MatchDate.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel_MatchDate - Invoke Workflow File (Process\Excel\Excel_MatchDate.xaml)" sap:VirtualizedContainerService.HintSize="575,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Process\Excel\Excel_MatchDate.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_MasterData">[dt_MasterData]</InArgument>
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_NotFound">[dt_NotFound]</InOutArgument>
@@ -193,7 +193,7 @@
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel_MarkMatches - Invoke Workflow File (Process\Excel\Excel_MarkMatches.xaml)" sap:VirtualizedContainerService.HintSize="570,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Process\Excel\Excel_MarkMatches.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel_MarkMatches - Invoke Workflow File (Process\Excel\Excel_MarkMatches.xaml)" sap:VirtualizedContainerService.HintSize="575,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Process\Excel\Excel_MarkMatches.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_InputData">[dt_FinalOutputData]</InArgument>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_MasterData">[dt_MasterData]</InArgument>
@@ -205,7 +205,7 @@
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="570,57" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="575,57" sap2010:WorkflowViewState.IdRef="CommentOut_7">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
@@ -236,7 +236,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="570,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="575,57" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
@@ -266,7 +266,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="570,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="575,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
@@ -296,7 +296,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Assign sap:VirtualizedContainerService.HintSize="570,116" sap2010:WorkflowViewState.IdRef="Assign_5">
+    <Assign sap:VirtualizedContainerService.HintSize="575,115" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:List(x:String)">[DuplicateNames]</OutArgument>
       </Assign.To>
@@ -308,19 +308,19 @@ Select(Function(g) g.Key).
 ToList()]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_FinalOutputData]" DisplayName="For Each Row in Filtered Data Table" sap:VirtualizedContainerService.HintSize="570,676" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_FinalOutputData]" DisplayName="For Each Row in Filtered Data Table" sap:VirtualizedContainerService.HintSize="575,671" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="536,478" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="536,475" sap2010:WorkflowViewState.IdRef="Sequence_15">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[DuplicateNames.Contains(CurrentRow(&quot;Entity Name&quot;).ToString.Trim)]" sap:VirtualizedContainerService.HintSize="502,418" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[DuplicateNames.Contains(CurrentRow(&quot;Entity Name&quot;).ToString.Trim)]" sap:VirtualizedContainerService.HintSize="502,415" sap2010:WorkflowViewState.IdRef="If_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -328,13 +328,13 @@ ToList()]</InArgument>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,166" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,165" sap2010:WorkflowViewState.IdRef="Sequence_13">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_9">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_9">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Object">[CurrentRow("Entity Name")]</OutArgument>
                     </Assign.To>
@@ -345,7 +345,7 @@ ToList()]</InArgument>
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,90" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_14">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -364,13 +364,13 @@ ToList()]</InArgument>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel_ValidateAndMarkPreviousData - Invoke Workflow File (Process\Excel\Excel_ValidateAndMarkPreviousData.xaml)" sap:VirtualizedContainerService.HintSize="570,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Process\Excel\Excel_ValidateAndMarkPreviousData.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Excel_ValidateAndMarkPreviousData - Invoke Workflow File (Process\Excel\Excel_ValidateAndMarkPreviousData.xaml)" sap:VirtualizedContainerService.HintSize="575,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Process\Excel\Excel_ValidateAndMarkPreviousData.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_PreviousData">[dt_PreviousData]</InArgument>
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_InputData">[dt_FinalOutputData]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <Assign DisplayName="Filter Final table with required columns" sap:VirtualizedContainerService.HintSize="570,116" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign DisplayName="Filter Final table with required columns" sap:VirtualizedContainerService.HintSize="575,115" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[dt_FinalOutputData]</OutArgument>
       </Assign.To>
@@ -384,7 +384,7 @@ ToList()]</InArgument>
 	)]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign DisplayName="Filter Final table with required columns" sap:VirtualizedContainerService.HintSize="570,116" sap2010:WorkflowViewState.IdRef="Assign_10">
+    <Assign DisplayName="Filter Final table with required columns" sap:VirtualizedContainerService.HintSize="575,115" sap2010:WorkflowViewState.IdRef="Assign_10">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[dt_NotFound]</OutArgument>
       </Assign.To>
@@ -397,32 +397,32 @@ ToList()]</InArgument>
 	)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="570,57" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ShowExcelWindow="False">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="575,1622" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ShowExcelWindow="False">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="541,1478" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="541,1463" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="507,1418" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" TemplatePath="C:\Users\ALTFEST_DA_User2\Documents\Altfest\2025 Tax Returns Received 06.12.26.xlsx" WorkbookPath="[in_Config(&quot;OutputFilePath&quot;).ToString.Trim]">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="507,1403" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" TemplatePath="C:\Users\ALTFEST_DA_User2\Documents\Altfest\2025 Tax Returns Received 06.12.26.xlsx" WorkbookPath="[in_Config(&quot;OutputFilePath&quot;).ToString.Trim]">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="473,1122" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="473,1111" sap2010:WorkflowViewState.IdRef="Sequence_5">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:WriteRangeX Destination="[Excel.Sheet(in_Config(&quot;OutputTemplateSheet&quot;).ToString.Trim).Range(&quot;A2&quot;)]" DisplayName="Write DataTable to Excel - Final Output Data" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="439,193" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[dt_FinalOutputData]" />
-                    <ueab:SortX DisplayName="Sort Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="439,320" sap2010:WorkflowViewState.IdRef="SortX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;)]">
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(in_Config(&quot;OutputTemplateSheet&quot;).ToString.Trim).Range(&quot;A2&quot;)]" DisplayName="Write DataTable to Excel - Final Output Data" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="439,191" sap2010:WorkflowViewState.IdRef="WriteRangeX_1" IgnoreEmptySource="False" Source="[dt_FinalOutputData]" />
+                    <ueab:SortX DisplayName="Sort Range" HasHeaders="True" sap:VirtualizedContainerService.HintSize="439,317" sap2010:WorkflowViewState.IdRef="SortX_1" Range="[Excel.Sheet(&quot;Sheet1&quot;)]">
                       <ueab:SortX.Body>
                         <ActivityAction>
                           <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_10">
@@ -431,14 +431,14 @@ ToList()]</InArgument>
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ueab:SortColumnX ColumnName="Advisor" DisplayName="Sort By Column" sap:VirtualizedContainerService.HintSize="382,73" sap2010:WorkflowViewState.IdRef="SortColumnX_1" SortDirection="Ascending" />
-                            <ueab:SortColumnX ColumnName="Client Name" DisplayName="Sort By Column" sap:VirtualizedContainerService.HintSize="382,73" sap2010:WorkflowViewState.IdRef="SortColumnX_2" SortDirection="Ascending" />
+                            <ueab:SortColumnX ColumnName="Advisor" DisplayName="Sort By Column" sap:VirtualizedContainerService.HintSize="382,72" sap2010:WorkflowViewState.IdRef="SortColumnX_1" SortDirection="Ascending" />
+                            <ueab:SortColumnX ColumnName="Client Name" DisplayName="Sort By Column" sap:VirtualizedContainerService.HintSize="382,72" sap2010:WorkflowViewState.IdRef="SortColumnX_2" SortDirection="Ascending" />
                           </Sequence>
                         </ActivityAction>
                       </ueab:SortX.Body>
                     </ueab:SortX>
-                    <ueab:WriteCellX Cell="[Excel.Sheet(in_Config(&quot;OutputTemplateSheet&quot;).ToString.Trim).Cell(&quot;A&quot;+ (dt_FinalOutputData.Rows.Count + 3).ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,193" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;No &quot; + (Today.Year -1).ToString + &quot; Tax Return Received but Tax Planning Recommendations Provided:&quot;]" />
-                    <ueab:FormatRangeX DisplayName="Format Cells - Apply bold" sap:VirtualizedContainerService.HintSize="439,172" sap2010:WorkflowViewState.IdRef="FormatRangeX_1" Range="[Excel.Sheet(in_Config(&quot;OutputTemplateSheet&quot;).ToString.Trim).Range(&quot;A&quot;+ (dt_FinalOutputData.Rows.Count + 3).ToString)]">
+                    <ueab:WriteCellX Cell="[Excel.Sheet(in_Config(&quot;OutputTemplateSheet&quot;).ToString.Trim).Cell(&quot;A&quot;+ (dt_FinalOutputData.Rows.Count + 3).ToString)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="439,191" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;No &quot; + (Today.Year -1).ToString + &quot; Tax Return Received but Tax Planning Recommendations Provided:&quot;]" />
+                    <ueab:FormatRangeX DisplayName="Format Cells - Apply bold" sap:VirtualizedContainerService.HintSize="439,170" sap2010:WorkflowViewState.IdRef="FormatRangeX_1" Range="[Excel.Sheet(in_Config(&quot;OutputTemplateSheet&quot;).ToString.Trim).Range(&quot;A&quot;+ (dt_FinalOutputData.Rows.Count + 3).ToString)]">
                       <ueab:FormatRangeX.Alignment>
                         <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
                       </ueab:FormatRangeX.Alignment>
@@ -449,7 +449,7 @@ ToList()]</InArgument>
                         <ueab:GeneralFormat />
                       </ueab:FormatRangeX.Format>
                     </ueab:FormatRangeX>
-                    <ueab:WriteRangeX Destination="[Excel.Sheet(in_Config(&quot;OutputTemplateSheet&quot;).ToString.Trim).Range(&quot;A&quot;+ (dt_FinalOutputData.Rows.Count + 4).ToString)]" DisplayName="Write DataTable to Excel - No found clients" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="439,184" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[dt_NotFound]" />
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(in_Config(&quot;OutputTemplateSheet&quot;).ToString.Trim).Range(&quot;A&quot;+ (dt_FinalOutputData.Rows.Count + 4).ToString)]" DisplayName="Write DataTable to Excel - No found clients" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="439,182" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[dt_NotFound]" />
                   </Sequence>
                 </ActivityAction>
               </ueab:ExcelApplicationCard.Body>
@@ -465,19 +465,23 @@ ToList()]</InArgument>
       </ueab:ExcelProcessScopeX.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ueab:ExcelProcessScopeX>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim excelApp As New Microsoft.Office.Interop.Excel.Application()&#xA;excelApp.Visible = False&#xA;excelApp.DisplayAlerts = False  ' Desactiva diálogos&#xA;excelApp.ScreenUpdating = False  ' Mejora velocidad&#xA;&#xA;Dim workbook As Microsoft.Office.Interop.Excel.Workbook = excelApp.Workbooks.Open(in_excelPath)&#xA;Dim worksheet As Microsoft.Office.Interop.Excel.Worksheet = CType(workbook.Sheets(&quot;Sheet1&quot;), Microsoft.Office.Interop.Excel.Worksheet)&#xA;&#xA;For row As Integer = 2 To worksheet.UsedRange.Rows.Count&#xA;    Try&#xA;        Dim cellF = worksheet.Range(&quot;F&quot; &amp; row.ToString()).Value&#xA;        &#xA;        If cellF IsNot Nothing AndAlso cellF.ToString().Contains(&quot;New tax returns received flag&quot;) Then&#xA;            worksheet.Range(&quot;A&quot; &amp; row.ToString()).Interior.Color = RGB(218, 233, 248)&#xA;            worksheet.Range(&quot;F&quot; &amp; row.ToString()).Value = &quot;&quot;&#xA;        End If&#xA;    Catch ex As Exception&#xA;    End Try&#xA;Next&#xA;&#xA;workbook.Save()&#xA;workbook.Close(False)&#xA;excelApp.ScreenUpdating = True&#xA;excelApp.Quit()&#xA;&#xA;' Liberar memoria completamente&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(worksheet)&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook)&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp)&#xA;GC.Collect()&#xA;GC.WaitForPendingFinalizers()&#xA;&#xA;' Killprocess como fallback (por si Excel sigue abierto)&#xA;Try&#xA;    Dim pList = Diagnostics.Process.GetProcessesByName(&quot;EXCEL&quot;)&#xA;    For Each p In pList&#xA;        p.Kill()&#xA;    Next&#xA;Catch&#xA;End Try" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="570,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim excelApp As New Microsoft.Office.Interop.Excel.Application()&#xD;&#xA;excelApp.Visible = False&#xD;&#xA;excelApp.DisplayAlerts = False&#xD;&#xA;excelApp.ScreenUpdating = False&#xD;&#xA;&#xD;&#xA;Dim workbook As Microsoft.Office.Interop.Excel.Workbook = excelApp.Workbooks.Open(in_ExcelPath)&#xD;&#xA;Dim sheetToHide As Microsoft.Office.Interop.Excel.Worksheet = CType(workbook.Sheets(in_SheetToHide), Microsoft.Office.Interop.Excel.Worksheet)&#xD;&#xA;&#xD;&#xA;sheetToHide.Visible = Microsoft.Office.Interop.Excel.XlSheetVisibility.xlSheetHidden&#xD;&#xA;&#xD;&#xA;workbook.Save()&#xD;&#xA;workbook.Close(False)&#xD;&#xA;excelApp.ScreenUpdating = True&#xD;&#xA;excelApp.Quit()&#xD;&#xA;&#xD;&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(sheetToHide)&#xD;&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook)&#xD;&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp)&#xD;&#xA;GC.Collect()&#xD;&#xA;GC.WaitForPendingFinalizers()&#xD;&#xA;&#xD;&#xA;Try&#xD;&#xA;    Dim pList = Diagnostics.Process.GetProcessesByName(&quot;EXCEL&quot;)&#xD;&#xA;    For Each p In pList&#xD;&#xA;        p.Kill()&#xD;&#xA;    Next&#xD;&#xA;Catch&#xD;&#xA;End Try" DisplayName="Invoke Code - Hide Sheet" sap:VirtualizedContainerService.HintSize="575,197" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
       <ui:InvokeCode.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_excelPath">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;OutputFilePath&quot;).ToString.Trim" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_ExcelPath" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_SheetToHide" />
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <Assign sap:VirtualizedContainerService.HintSize="570,115" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim excelApp As New Microsoft.Office.Interop.Excel.Application()&#xA;excelApp.Visible = False&#xA;excelApp.DisplayAlerts = False  ' Desactiva diálogos&#xA;excelApp.ScreenUpdating = False  ' Mejora velocidad&#xA;&#xA;Dim workbook As Microsoft.Office.Interop.Excel.Workbook = excelApp.Workbooks.Open(in_excelPath)&#xA;Dim worksheet As Microsoft.Office.Interop.Excel.Worksheet = CType(workbook.Sheets(&quot;Sheet1&quot;), Microsoft.Office.Interop.Excel.Worksheet)&#xA;&#xA;For row As Integer = 2 To worksheet.UsedRange.Rows.Count&#xA;    Try&#xA;        Dim cellF = worksheet.Range(&quot;F&quot; &amp; row.ToString()).Value&#xA;        &#xA;        If cellF IsNot Nothing AndAlso cellF.ToString().Contains(&quot;New tax returns received flag&quot;) Then&#xA;            worksheet.Range(&quot;A&quot; &amp; row.ToString()).Interior.Color = RGB(218, 233, 248)&#xA;            worksheet.Range(&quot;F&quot; &amp; row.ToString()).Value = &quot;&quot;&#xA;        End If&#xA;    Catch ex As Exception&#xA;    End Try&#xA;Next&#xA;&#xA;workbook.Save()&#xA;workbook.Close(False)&#xA;excelApp.ScreenUpdating = True&#xA;excelApp.Quit()&#xA;&#xA;' Liberar memoria completamente&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(worksheet)&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook)&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp)&#xA;GC.Collect()&#xA;GC.WaitForPendingFinalizers()&#xA;&#xA;' Killprocess como fallback (por si Excel sigue abierto)&#xA;Try&#xA;    Dim pList = Diagnostics.Process.GetProcessesByName(&quot;EXCEL&quot;)&#xA;    For Each p In pList&#xA;        p.Kill()&#xA;    Next&#xA;Catch&#xA;End Try" DisplayName="Invoke Code - Mark new clients" sap:VirtualizedContainerService.HintSize="575,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_excelPath">[in_Config("OutputFilePath").ToString.Trim]</InArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <Assign sap:VirtualizedContainerService.HintSize="575,114" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_FinalRowsCount]</OutArgument>
       </Assign.To>
@@ -485,6 +489,6 @@ ToList()]</InArgument>
         <InArgument x:TypeArguments="x:String">[dt_FinalOutputData.RowCount.ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="570,80" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
+    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="575,79" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
   </Sequence>
 </Activity>

@@ -120,7 +120,7 @@
       <AssemblyReference>ExtendedExtractionRe.1Hlfw30eSiN1eLbILaNL6W1</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Process title]&#xA;[Process description]&#xA;[Additional information (e.g., author, contact information and applications involved and required external setup)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1438,778.04" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID3}" sap2010:Annotation.AnnotationText="[Process title]&#xA;[Process description]&#xA;[Additional information (e.g., author, contact information and applications involved and required external setup)]" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="1068,778.04" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -131,7 +131,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Get the next transaction to be processed." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="602,1413" sap2010:WorkflowViewState.IdRef="State_4">
+    <State x:Name="__ReferenceID0" sap2010:Annotation.AnnotationText="Get the next transaction to be processed." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="229,107" sap2010:WorkflowViewState.IdRef="State_4">
       <State.Entry>
         <Sequence sap2010:Annotation.AnnotationText="Retrieve a new transaction data to be processed.&#xA;The TransactionNumber variable holds the current transaction number and incrementing this variable makes the framework retrieve the next transaction. If the framework is retrying a failed transaction, this variable is not incremented until the maximum number of retry attempts is reached." DisplayName="Retrieve Data" sap:VirtualizedContainerService.HintSize="556,994" sap2010:WorkflowViewState.IdRef="Sequence_25">
           <Sequence.Variables>
@@ -1026,7 +1026,7 @@
                   </Transition.To>
                   <Transition.Condition>[BusinessException IsNot Nothing]</Transition.Condition>
                 </Transition>
-                <Transition sap2010:Annotation.AnnotationText="There is no need for any action in case of successful transaction.&#xA;The process should simply go to next transaction." DisplayName="Success" sap:VirtualizedContainerService.HintSize="616,1149" sap2010:WorkflowViewState.IdRef="Transition_5">
+                <Transition sap2010:Annotation.AnnotationText="There is no need for any action in case of successful transaction.&#xA;The process should simply go to next transaction." DisplayName="Success" sap:VirtualizedContainerService.HintSize="616,1029" sap2010:WorkflowViewState.IdRef="Transition_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:PointCollection x:Key="ConnectorLocation">780,458.2 810,458.2 810,289.9 774,289.9</av:PointCollection>
@@ -1040,7 +1040,7 @@
                     <x:Reference>__ReferenceID0</x:Reference>
                   </Transition.To>
                   <Transition.Action>
-                    <Sequence sap:VirtualizedContainerService.HintSize="513,729" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                    <Sequence sap:VirtualizedContainerService.HintSize="513,609" sap2010:WorkflowViewState.IdRef="Sequence_59">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="EmailBody" />
                         <Variable x:TypeArguments="x:String" Name="TrackerUrl" />
@@ -1104,18 +1104,35 @@
                           </scg:List>
                         </ui:MultipleAssign.AssignOperations>
                       </ui:MultipleAssign>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Outlook_SendMailMessage - Invoke Workflow File (Process\Outlook\Outlook_SendMailMessage.xaml)" sap:VirtualizedContainerService.HintSize="479,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="Process\Outlook\Outlook_SendMailMessage.xaml">
-                        <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_ToEmail">[Config("Altfest_CustomerMail").ToString.Trim]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[Config("SubjectFinalEmail").ToString.Trim.Replace("[PreviousYear]", (Today.Year - 1).ToString)]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_Body">[EmailBody]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_AttachFile">[Config("OutputFilePath").ToString.Trim]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_CCEmail">[Config("Altfest_SupportMail").ToString.Trim]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="in_SecondAttachFile" />
-                          <InArgument x:TypeArguments="x:String" x:Key="in_ThirdAttachFile" />
-                          <InArgument x:TypeArguments="x:String" x:Key="in_ImportanceLevel">Normal</InArgument>
-                        </ui:InvokeWorkflowFile.Arguments>
-                      </ui:InvokeWorkflowFile>
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,228" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Outlook_SendMailMessage - Invoke Workflow File (Process\Outlook\Outlook_SendMailMessage.xaml)" sap:VirtualizedContainerService.HintSize="382,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="Process\Outlook\Outlook_SendMailMessage.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_ToEmail">[Config("Altfest_CustomerMail").ToString.Trim]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Subject">[Config("SubjectFinalEmail").ToString.Trim.Replace("[PreviousYear]", (Today.Year - 1).ToString)]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Body">[EmailBody]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_AttachFile">[Config("OutputFilePath").ToString.Trim]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_CCEmail">[Config("Altfest_SupportMail").ToString.Trim]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_SecondAttachFile" />
+                                <InArgument x:TypeArguments="x:String" x:Key="in_ThirdAttachFile" />
+                                <InArgument x:TypeArguments="x:String" x:Key="in_ImportanceLevel">Normal</InArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:CommentOut>
                     </Sequence>
                   </Transition.Action>
                   <Transition.Condition>[SystemException Is Nothing And BusinessException is Nothing]</Transition.Condition>
