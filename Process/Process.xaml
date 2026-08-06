@@ -136,7 +136,7 @@
       <AssemblyReference>ExtendedExtractionRe.1Hlfw30eSiN1eLbILaNL6W1</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1250,4663" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1240,4623" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_OutputData" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_FinalOutputData" />
@@ -380,7 +380,7 @@ ToList()]</InArgument>
     "Entity Owner: Full Name",
     "TR Uploaded to FPAlpha",
 	Today.Year.ToString + " Tax Planning Recommendations Provided to Client",
-	"New tax returns"
+	"New tax returns received"
 	)]</InArgument>
       </Assign.Value>
     </Assign>
@@ -397,7 +397,7 @@ ToList()]</InArgument>
 	)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="575,1622" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ShowExcelWindow="False">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="575,1582" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ShowExcelWindow="False">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
@@ -470,10 +470,14 @@ ToList()]</InArgument>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ueab:ExcelProcessScopeX>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim excelApp As New Microsoft.Office.Interop.Excel.Application()&#xD;&#xA;excelApp.Visible = False&#xD;&#xA;excelApp.DisplayAlerts = False&#xD;&#xA;excelApp.ScreenUpdating = False&#xD;&#xA;&#xD;&#xA;Dim workbook As Microsoft.Office.Interop.Excel.Workbook = excelApp.Workbooks.Open(in_ExcelPath)&#xD;&#xA;Dim sheetToHide As Microsoft.Office.Interop.Excel.Worksheet = CType(workbook.Sheets(in_SheetToHide), Microsoft.Office.Interop.Excel.Worksheet)&#xD;&#xA;&#xD;&#xA;sheetToHide.Visible = Microsoft.Office.Interop.Excel.XlSheetVisibility.xlSheetHidden&#xD;&#xA;&#xD;&#xA;workbook.Save()&#xD;&#xA;workbook.Close(False)&#xD;&#xA;excelApp.ScreenUpdating = True&#xD;&#xA;excelApp.Quit()&#xD;&#xA;&#xD;&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(sheetToHide)&#xD;&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook)&#xD;&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp)&#xD;&#xA;GC.Collect()&#xD;&#xA;GC.WaitForPendingFinalizers()&#xD;&#xA;&#xD;&#xA;Try&#xD;&#xA;    Dim pList = Diagnostics.Process.GetProcessesByName(&quot;EXCEL&quot;)&#xD;&#xA;    For Each p In pList&#xD;&#xA;        p.Kill()&#xD;&#xA;    Next&#xD;&#xA;Catch&#xD;&#xA;End Try" DisplayName="Invoke Code - Hide Sheet" sap:VirtualizedContainerService.HintSize="575,197" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim excelApp As New Microsoft.Office.Interop.Excel.Application()&#xA;excelApp.Visible = False&#xA;excelApp.DisplayAlerts = False&#xA;excelApp.ScreenUpdating = False&#xA;&#xA;Dim workbook As Microsoft.Office.Interop.Excel.Workbook = excelApp.Workbooks.Open(in_ExcelPath)&#xA;Dim sheetToHide As Microsoft.Office.Interop.Excel.Worksheet = CType(workbook.Sheets(in_SheetToHide), Microsoft.Office.Interop.Excel.Worksheet)&#xA;&#xA;sheetToHide.Visible = Microsoft.Office.Interop.Excel.XlSheetVisibility.xlSheetHidden&#xA;&#xA;workbook.Save()&#xA;workbook.Close(False)&#xA;excelApp.ScreenUpdating = True&#xA;excelApp.Quit()&#xA;&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(sheetToHide)&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook)&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp)&#xA;GC.Collect()&#xA;GC.WaitForPendingFinalizers()&#xA;&#xA;Try&#xA;    Dim pList = Diagnostics.Process.GetProcessesByName(&quot;EXCEL&quot;)&#xA;    For Each p In pList&#xA;        p.Kill()&#xA;    Next&#xA;Catch&#xA;End Try" DisplayName="Invoke Code - Hide Sheet" sap:VirtualizedContainerService.HintSize="575,197" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
       <ui:InvokeCode.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_ExcelPath" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_SheetToHide" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_ExcelPath">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;OutputFilePath&quot;).ToString.Trim" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_SheetToHide">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_Config(&quot;OutputFileSheet&quot;).ToString.Trim" />
+        </InArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
     <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim excelApp As New Microsoft.Office.Interop.Excel.Application()&#xA;excelApp.Visible = False&#xA;excelApp.DisplayAlerts = False  ' Desactiva diálogos&#xA;excelApp.ScreenUpdating = False  ' Mejora velocidad&#xA;&#xA;Dim workbook As Microsoft.Office.Interop.Excel.Workbook = excelApp.Workbooks.Open(in_excelPath)&#xA;Dim worksheet As Microsoft.Office.Interop.Excel.Worksheet = CType(workbook.Sheets(&quot;Sheet1&quot;), Microsoft.Office.Interop.Excel.Worksheet)&#xA;&#xA;For row As Integer = 2 To worksheet.UsedRange.Rows.Count&#xA;    Try&#xA;        Dim cellF = worksheet.Range(&quot;F&quot; &amp; row.ToString()).Value&#xA;        &#xA;        If cellF IsNot Nothing AndAlso cellF.ToString().Contains(&quot;New tax returns received flag&quot;) Then&#xA;            worksheet.Range(&quot;A&quot; &amp; row.ToString()).Interior.Color = RGB(218, 233, 248)&#xA;            worksheet.Range(&quot;F&quot; &amp; row.ToString()).Value = &quot;&quot;&#xA;        End If&#xA;    Catch ex As Exception&#xA;    End Try&#xA;Next&#xA;&#xA;workbook.Save()&#xA;workbook.Close(False)&#xA;excelApp.ScreenUpdating = True&#xA;excelApp.Quit()&#xA;&#xA;' Liberar memoria completamente&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(worksheet)&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(workbook)&#xA;System.Runtime.InteropServices.Marshal.ReleaseComObject(excelApp)&#xA;GC.Collect()&#xA;GC.WaitForPendingFinalizers()&#xA;&#xA;' Killprocess como fallback (por si Excel sigue abierto)&#xA;Try&#xA;    Dim pList = Diagnostics.Process.GetProcessesByName(&quot;EXCEL&quot;)&#xA;    For Each p In pList&#xA;        p.Kill()&#xA;    Next&#xA;Catch&#xA;End Try" DisplayName="Invoke Code - Mark new clients" sap:VirtualizedContainerService.HintSize="575,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1">

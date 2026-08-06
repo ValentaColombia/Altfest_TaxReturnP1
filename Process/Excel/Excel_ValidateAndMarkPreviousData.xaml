@@ -95,7 +95,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Excel_ValidateAndMarkPreviousData" sap:VirtualizedContainerService.HintSize="1089,1158" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Excel_ValidateAndMarkPreviousData" sap:VirtualizedContainerService.HintSize="1101,1158" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:HashSet(x:String)" Name="hsPreviosClients" />
     </Sequence.Variables>
@@ -163,7 +163,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
-                      <OutArgument x:TypeArguments="x:Object">[CurrentRow("New tax returns")]</OutArgument>
+                      <OutArgument x:TypeArguments="x:Object">[CurrentRow("New tax returns received")]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
                       <InArgument x:TypeArguments="x:Object">["New tax returns received flag"]</InArgument>

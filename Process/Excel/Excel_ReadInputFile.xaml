@@ -162,14 +162,14 @@
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Excel_ReadInputFile" sap:VirtualizedContainerService.HintSize="1051,4789" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Excel_ReadInputFile" sap:VirtualizedContainerService.HintSize="1240,1845" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message - Start Read Input Data" sap:VirtualizedContainerService.HintSize="540,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;--- Starting process to read Input Data and Master Data ---&quot;]" />
-    <Sequence DisplayName="Sequence for output File" sap:VirtualizedContainerService.HintSize="540,2469" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Sequence for output File" sap:VirtualizedContainerService.HintSize="540,57" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="dt_InitialData" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt_FinalData" />
@@ -180,7 +180,7 @@
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -361,7 +361,7 @@ ToList()]</InArgument>
         </Assign.Value>
       </Assign>
     </Sequence>
-    <Sequence DisplayName="Sequence for Master file" sap:VirtualizedContainerService.HintSize="540,1371" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence DisplayName="Sequence for Master file" sap:VirtualizedContainerService.HintSize="540,839" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="Index" />
       </Sequence.Variables>
@@ -371,22 +371,62 @@ ToList()]</InArgument>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="502,57" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+      <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[out_dt_MasterData]" DisplayName="Read Range Workbook - Master File" sap:VirtualizedContainerService.HintSize="502,120" sap2010:WorkflowViewState.IdRef="ReadRange_12" SheetName="[in_Config(&quot;MasterFileSheet&quot;).ToString.Trim]" WorkbookPath="[in_Config(&quot;MasterFilePath&quot;).ToString.Trim]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ReadRange>
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="502,57" sap2010:WorkflowViewState.IdRef="CommentOut_7">
         <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,171" sap2010:WorkflowViewState.IdRef="Sequence_20">
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_21">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[out_dt_MasterData]" DisplayName="Read Range Workbook - Master File" sap:VirtualizedContainerService.HintSize="382,111" sap2010:WorkflowViewState.IdRef="ReadRange_11" SheetName="[in_Config(&quot;MasterFileSheet&quot;).ToString.Trim]" WorkbookPath="[in_Config(&quot;MasterFilePath&quot;).ToString.Trim]">
+            <uma:Office365ApplicationScope ApplicationId="{x:Null}" ApplicationSecret="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" ImpersonatedUserEmailAddress="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" Password="{x:Null}" SecureApplicationSecret="{x:Null}" SecurePassword="{x:Null}" TenantId="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" Account="Valenta@altfest.com" AuthenticationType="InteractiveToken" ConfigLocation="PropertiesPanel" DataStoreLocation="DISK" DisplayName="Microsoft 365 Scope" EmailAddress="Valenta@altfest.com" Environment="Global" sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_3" OAuthApplication="UiPath" RuntimeItemInputMode="Browse" UseConnectionService="False">
+              <uma:Office365ApplicationScope.AuthenticationScopes>
+                <scg:List x:TypeArguments="InArgument(x:String)" Capacity="2">
+                  <InArgument x:TypeArguments="x:String">Sites.Read.All</InArgument>
+                  <InArgument x:TypeArguments="x:String">Sites.ReadWrite.All</InArgument>
+                </scg:List>
+              </uma:Office365ApplicationScope.AuthenticationScopes>
+              <uma:Office365ApplicationScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="ParentScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,402" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="mg:DriveItem" Name="MasterFileDriveItem" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <umaf:GetItem ContinueOnError="{x:Null}" DriveMetadata="{x:Null}" DriveName="{x:Null}" ItemFriendlyName="{x:Null}" ItemId="{x:Null}" SiteUrl="{x:Null}" AuthScopesInvalid="False" DisplayName="Get File or Folder" sap:VirtualizedContainerService.HintSize="382,138" sap2010:WorkflowViewState.IdRef="GetItem_2" Item="[MasterFileDriveItem]" ItemSelectionMode="ItemUrl" ItemUrl="[in_MasterFileUrl]" />
+                    <umae:ReadRange ContinueOnError="{x:Null}" Range="{x:Null}" AddHeaders="True" AuthScopesInvalid="False" DataTable="[out_dt_MasterData]" DisplayName="Read Range - Input File First Time" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="ReadRange_6" SheetName="[in_OutputFileSheet]" ValuesType="Values" Workbook="[MasterFileDriveItem]" />
+                  </Sequence>
+                </ActivityAction>
+              </uma:Office365ApplicationScope.Body>
+              <uma:Office365ApplicationScope.RuntimeItemFullPathBackup>
+                <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="{x:Null}">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uma:Office365ApplicationScope.RuntimeItemFullPathBackup>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-            </ui:ReadRange>
+            </uma:Office365ApplicationScope>
           </Sequence>
         </ui:CommentOut.Body>
         <sap:WorkflowViewStateService.ViewState>
@@ -396,46 +436,6 @@ ToList()]</InArgument>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <uma:Office365ApplicationScope ApplicationId="{x:Null}" ApplicationSecret="{x:Null}" BrowserItemFriendlyName="{x:Null}" BrowserItemFullPath="{x:Null}" BrowserItemId="{x:Null}" BrowserParentItemId="{x:Null}" BrowserRuntimeItemFriendlyName="{x:Null}" BrowserRuntimeItemFullPath="{x:Null}" BrowserRuntimeItemId="{x:Null}" BrowserRuntimeParentItemId="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Connector="{x:Null}" ContinueOnError="{x:Null}" Folder="{x:Null}" ImpersonatedUserEmailAddress="{x:Null}" ManualRuntimeItemFullPath="{x:Null}" Password="{x:Null}" SecureApplicationSecret="{x:Null}" SecurePassword="{x:Null}" TenantId="{x:Null}" Timeout="{x:Null}" Username="{x:Null}" Account="Valenta@altfest.com" AuthenticationType="InteractiveToken" ConfigLocation="PropertiesPanel" DataStoreLocation="DISK" DisplayName="Microsoft 365 Scope" EmailAddress="Valenta@altfest.com" Environment="Global" sap:VirtualizedContainerService.HintSize="502,652" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_3" OAuthApplication="UiPath" RuntimeItemInputMode="Browse" UseConnectionService="False">
-        <uma:Office365ApplicationScope.AuthenticationScopes>
-          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="2">
-            <InArgument x:TypeArguments="x:String">Sites.Read.All</InArgument>
-            <InArgument x:TypeArguments="x:String">Sites.ReadWrite.All</InArgument>
-          </scg:List>
-        </uma:Office365ApplicationScope.AuthenticationScopes>
-        <uma:Office365ApplicationScope.Body>
-          <ActivityAction x:TypeArguments="x:Object">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="x:Object" Name="ParentScope" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,402" sap2010:WorkflowViewState.IdRef="Sequence_15">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="mg:DriveItem" Name="MasterFileDriveItem" />
-              </Sequence.Variables>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <umaf:GetItem ContinueOnError="{x:Null}" DriveMetadata="{x:Null}" DriveName="{x:Null}" ItemFriendlyName="{x:Null}" ItemId="{x:Null}" SiteUrl="{x:Null}" AuthScopesInvalid="False" DisplayName="Get File or Folder" sap:VirtualizedContainerService.HintSize="382,138" sap2010:WorkflowViewState.IdRef="GetItem_2" Item="[MasterFileDriveItem]" ItemSelectionMode="ItemUrl" ItemUrl="[in_MasterFileUrl]" />
-              <umae:ReadRange ContinueOnError="{x:Null}" Range="{x:Null}" AddHeaders="True" AuthScopesInvalid="False" DataTable="[out_dt_MasterData]" DisplayName="Read Range - Input File First Time" sap:VirtualizedContainerService.HintSize="382,204" sap2010:WorkflowViewState.IdRef="ReadRange_6" SheetName="[in_OutputFileSheet]" ValuesType="Values" Workbook="[MasterFileDriveItem]" />
-            </Sequence>
-          </ActivityAction>
-        </uma:Office365ApplicationScope.Body>
-        <uma:Office365ApplicationScope.RuntimeItemFullPathBackup>
-          <usau:BackupSlot x:TypeArguments="umafe:EDriveItemMode" StoredValue="{x:Null}">
-            <usau:BackupSlot.BackupValues>
-              <scg:Dictionary x:TypeArguments="umafe:EDriveItemMode, scg:List(x:Object)" />
-            </usau:BackupSlot.BackupValues>
-          </usau:BackupSlot>
-        </uma:Office365ApplicationScope.RuntimeItemFullPathBackup>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </uma:Office365ApplicationScope>
       <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Index" DataTable="[out_dt_MasterData]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="502,218" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_3" />
       <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[Index]" DataTable="[out_dt_MasterData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="502,352" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
         <ui:ForEachRow.Body>
