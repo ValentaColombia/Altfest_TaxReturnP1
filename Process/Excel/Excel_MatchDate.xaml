@@ -190,7 +190,7 @@
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Excel_MatchDate" sap:VirtualizedContainerService.HintSize="1101,4803" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Excel_MatchDate" sap:VirtualizedContainerService.HintSize="1240,3812" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Filtered" />
       <Variable x:TypeArguments="x:String" Name="List1Json" />
@@ -209,10 +209,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="706,173" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;--- Starting process to match names and update tax dates --&quot;]" />
-    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_ApiKeyAssetName]" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[in_OrchestratorQueueFolder]" sap:VirtualizedContainerService.HintSize="706,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[ApiKeySecure]" Username="[ApiEndPoint]" />
-    <ui:ReadTextFile File="{x:Null}" Content="[jsonTemplate]" DisplayName="Read Text File" FileName="[in_MatchesPromptFilePath]" sap:VirtualizedContainerService.HintSize="706,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="706,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="518,173" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;--- Starting process to match names and update tax dates --&quot;]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_ApiKeyAssetName]" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[in_OrchestratorQueueFolder]" sap:VirtualizedContainerService.HintSize="518,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[ApiKeySecure]" Username="[ApiEndPoint]" />
+    <ui:ReadTextFile File="{x:Null}" Content="[jsonTemplate]" DisplayName="Read Text File" FileName="[in_MatchesPromptFilePath]" sap:VirtualizedContainerService.HintSize="518,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="518,57" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,163" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
@@ -230,7 +230,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <Assign sap:VirtualizedContainerService.HintSize="706,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[dt_Filtered]</OutArgument>
       </Assign.To>
@@ -238,7 +238,7 @@
         <InArgument x:TypeArguments="sd:DataTable">[in_dt_MasterData.Clone()]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt_MasterData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="706,889" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt_MasterData]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="518,889" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -292,7 +292,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <Assign sap:VirtualizedContainerService.HintSize="706,115" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign sap:VirtualizedContainerService.HintSize="518,115" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[dataJson]</OutArgument>
       </Assign.To>
@@ -313,7 +313,7 @@
 })]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="706,114" sap2010:WorkflowViewState.IdRef="Assign_5">
+    <Assign sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[escapedDataJson]</OutArgument>
       </Assign.To>
@@ -321,7 +321,7 @@
         <InArgument x:TypeArguments="x:String">[dataJson.Replace("""", "\""")]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="706,114" sap2010:WorkflowViewState.IdRef="Assign_4">
+    <Assign sap:VirtualizedContainerService.HintSize="518,114" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[jsonFinal]</OutArgument>
       </Assign.To>
@@ -329,7 +329,7 @@
         <InArgument x:TypeArguments="x:String">[jsonTemplate.Replace("{{DATA_JSON}}", escapedDataJson)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" Body="[jsonFinal]" BodyFormat="application/xml" DisplayName="Http client" EnableSSLVerification="True" EndPoint="[ApiEndPoint]" sap:VirtualizedContainerService.HintSize="706,102" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="POST" Result="[Response]" TimeoutMS="600000">
+    <ui:HttpClient ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="JSON" AuthenticationType="None" Body="[jsonFinal]" BodyFormat="application/xml" DisplayName="Http client" EnableSSLVerification="True" EndPoint="[ApiEndPoint]" sap:VirtualizedContainerService.HintSize="518,102" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="POST" Result="[Response]" TimeoutMS="600000">
       <ui:HttpClient.Attachments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Attachments>
@@ -347,15 +347,15 @@
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.UrlSegments>
     </ui:HttpClient>
-    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="706,172" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[ResponseJson]" JsonString="[Response]" />
-    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="706,172" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[FinalResponse]" JsonString="[ResponseJson(&quot;output&quot;)(0)(&quot;content&quot;)(0)(&quot;text&quot;).ToString]" />
-    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each currentJToken" sap:VirtualizedContainerService.HintSize="706,2307" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[FinalResponse(&quot;matches&quot;)]">
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="518,172" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[ResponseJson]" JsonString="[Response]" />
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="518,172" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[FinalResponse]" JsonString="[ResponseJson(&quot;output&quot;)(0)(&quot;content&quot;)(0)(&quot;text&quot;).ToString]" />
+    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each currentJToken" sap:VirtualizedContainerService.HintSize="518,1316" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[FinalResponse(&quot;matches&quot;)]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="njl:JToken">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="njl:JToken" Name="currentJToken" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="672,2161" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,1170" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="MasterIndex" />
             </Sequence.Variables>
@@ -364,7 +364,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="638,114" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_6">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[MasterIndex]</OutArgument>
               </Assign.To>
@@ -372,9 +372,9 @@
                 <InArgument x:TypeArguments="x:Int32">[CInt(currentJToken("list_1_index").ToString)]</InArgument>
               </Assign.Value>
             </Assign>
-            <If Condition="[currentJToken(&quot;status&quot;).ToString.Trim.ToUpper = &quot;MATCHED&quot;]" sap:VirtualizedContainerService.HintSize="638,1987" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[currentJToken(&quot;status&quot;).ToString.Trim.ToUpper = &quot;MATCHED&quot;]" sap:VirtualizedContainerService.HintSize="450,996" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="604,1384" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,393" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Int32" Name="InputDataIndex" />
                   </Sequence.Variables>
@@ -384,16 +384,29 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="570,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;--------------------------------------------------------------------------------------------------------&quot; + Environment.NewLine +&#xA;&quot;Client Name: &quot; + currentJToken(&quot;list_1_id&quot;).ToString.Trim  + Environment.NewLine +&#xA;&quot;Date: &quot; + CDate(in_dt_MasterData.Rows(MasterIndex)(&quot;Tax Planning&quot;)).ToString(&quot;MM/dd/yyyy&quot;)  + Environment.NewLine +&#xA;&quot;Status: Successfully Found&quot;  + Environment.NewLine +&#xA;&quot;--------------------------------------------------------------------------------------------------------&quot;]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="570,114" sap2010:WorkflowViewState.IdRef="Assign_8">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;--------------------------------------------------------------------------------------------------------&quot; + Environment.NewLine +&#xA;&quot;Client Name: &quot; + currentJToken(&quot;list_1_id&quot;).ToString.Trim  + Environment.NewLine +&#xA;&quot;Date: &quot; + CDate(in_dt_MasterData.Rows(MasterIndex)(&quot;Tax Planning&quot;)).ToString(&quot;MM/dd/yyyy&quot;)  + Environment.NewLine +&#xA;&quot;Status: Successfully Found&quot;  + Environment.NewLine +&#xA;&quot;--------------------------------------------------------------------------------------------------------&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <Assign sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="Assign_8">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[InputDataIndex]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
                       <InArgument x:TypeArguments="x:Int32">[CInt(currentJToken("list_2_matches")(0)("list_2_index").ToString)]</InArgument>
                     </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
                   </Assign>
-                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="570,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="CommentOut_3">
                     <ui:CommentOut.Body>
                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_14">
                         <sap:WorkflowViewStateService.ViewState>
@@ -447,20 +460,27 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:CommentOut>
-                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="570,122" sap2010:WorkflowViewState.IdRef="Delay_1" />
-                  <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="570,753" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ShowExcelWindow="False">
+                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="Delay_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Delay>
+                  <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="382,57" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2" ShowExcelWindow="False">
                     <ueab:ExcelProcessScopeX.Body>
                       <ActivityAction x:TypeArguments="ui:IExcelProcess">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="536,634" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="536,594" sap2010:WorkflowViewState.IdRef="Sequence_10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="502,574" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_Config(&quot;MasterFilePath&quot;).ToString.Trim]">
+                          <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="502,534" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[in_Config(&quot;MasterFilePath&quot;).ToString.Trim]">
                             <ueab:ExcelApplicationCard.Body>
                               <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                 <ActivityAction.Argument>
@@ -482,18 +502,24 @@
                     </ueab:ExcelProcessScopeX.Body>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ueab:ExcelProcessScopeX>
-                  <Assign sap:VirtualizedContainerService.HintSize="570,105" sap2010:WorkflowViewState.IdRef="Assign_7">
+                  <Assign sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="Assign_7">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Object">[io_dt_InputData.Rows(InputDataIndex)(Today.Year.ToString + " Tax Planning Recommendations Provided to Client")]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
                       <InArgument x:TypeArguments="x:Object">[CDate(in_dt_MasterData.Rows(MasterIndex)("Tax Planning")).ToString("MM/dd/yyyy")]</InArgument>
                     </Assign.Value>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
                   </Assign>
                 </Sequence>
               </If.Then>
@@ -505,7 +531,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,173" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;--------------------------------------------------------------------------------------------------------&quot; + Environment.NewLine +&#xA;&quot;Client Name: &quot; + currentJToken(&quot;list_1_id&quot;).ToString.Trim  + Environment.NewLine +&#xA;&quot;Date: &quot; + CDate(in_dt_MasterData.Rows(MasterIndex)(&quot;Tax Planning&quot;)).ToString(&quot;MM/dd/yyyy&quot;)  + Environment.NewLine +&#xA;&quot;Status: Not Found&quot;  + Environment.NewLine +&#xA;&quot;--------------------------------------------------------------------------------------------------------&quot;]" />
-                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_dt_MasterData.Rows(MasterIndex)(&quot;Column4&quot;).ToString.Trim, _&#xA;String.Empty, _&#xA;in_dt_MasterData.Rows(MasterIndex)(&quot;Column10&quot;).ToString.Trim, _&#xA;&quot;N/A&quot;, _&#xA;CDate(in_dt_MasterData.Rows(MasterIndex)(&quot;Tax Planning&quot;)).ToString(&quot;MM/dd/yyyy&quot;), _&#xA;String.Empty}]" DataTable="[io_dt_NotFound]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382,209" sap2010:WorkflowViewState.IdRef="AddDataRow_2">
+                  <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_dt_MasterData.Rows(MasterIndex)(&quot;Column3&quot;).ToString.Trim, _&#xD;&#xA;String.Empty, _&#xD;&#xA;in_dt_MasterData.Rows(MasterIndex)(&quot;Column9&quot;).ToString.Trim, _&#xD;&#xA;&quot;N/A&quot;, _&#xD;&#xA;CDate(in_dt_MasterData.Rows(MasterIndex)(&quot;Tax Planning&quot;)).ToString(&quot;MM/dd/yyyy&quot;), _&#xD;&#xA;String.Empty}]" DataTable="[io_dt_NotFound]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382,209" sap2010:WorkflowViewState.IdRef="AddDataRow_2">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -520,6 +546,6 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="706,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;All dates were updated&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="518,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;All dates were updated&quot;]" />
   </Sequence>
 </Activity>

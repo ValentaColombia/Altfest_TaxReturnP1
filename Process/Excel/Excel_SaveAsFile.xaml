@@ -108,7 +108,7 @@
       <AssemblyReference>System.Linq.Async</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Excel_SaveAsFile" sap:VirtualizedContainerService.HintSize="1421,3622" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Excel_SaveAsFile" sap:VirtualizedContainerService.HintSize="1240,3582" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -122,7 +122,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Login  Practifi" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,1551" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="dbec2c42-cd68-48d7-858c-fdbdf0a94cd0" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Login  Practifi" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,1471" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="dbec2c42-cd68-48d7-858c-fdbdf0a94cd0" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -214,19 +214,19 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge msedge.exe" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,1875" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="e5fb1359-5f7e-46c4-9ea9-a074c5fe376e" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge msedge.exe" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,1915" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="e5fb1359-5f7e-46c4-9ea9-a074c5fe376e" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,1635" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,1675" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Save as(1)'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="954,529" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e5fb1359-5f7e-46c4-9ea9-a074c5fe376e" Version="V5">
+            <uix:NCheckState DisplayName="Check App State 'Save as(1)'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="954,569" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e5fb1359-5f7e-46c4-9ea9-a074c5fe376e" Version="V5">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
@@ -313,7 +313,7 @@
             </ui:RetryScope>
             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Save'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="954,225" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e5fb1359-5f7e-46c4-9ea9-a074c5fe376e" Version="V5">
               <uix:NClick.Target>
-                <uix:TargetAnchorable BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="c0a04b4a-399b-4d8f-9b18-88fdf50bff00" ContentHash="7QEBel34VUqcISpPX4ELfw" DesignTimeRectangle="747, 489, 88, 26" ElementType="Button" FullSelectorArgument="&lt;wnd title='&amp;amp;Save' aaname='Save' cls='Button' /&gt;" Guid="71a84eea-ab9c-4e2b-95a7-1413c76d66e0" InformativeScreenshot="ca334bf0b9f539d4e17802ce204a5f7a.png" Reference="7jPtXh5mXUKBSkNqdCyr8w/H1cxVk47vk6Z8lHlrDigTA" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                <uix:TargetAnchorable BrowserURL="practifi-1692.lightning.force.com/lightning/r/Report/00OQU000000nLzN2AU/view" CVScreenId="c0a04b4a-399b-4d8f-9b18-88fdf50bff00" DesignTimeRectangle="747, 489, 88, 26" ElementType="Button" FullSelectorArgument="&lt;wnd title='&amp;amp;Save' aaname='Save' cls='Button' /&gt;" Guid="71a84eea-ab9c-4e2b-95a7-1413c76d66e0" InformativeScreenshot="ca334bf0b9f539d4e17802ce204a5f7a.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive" />
               </uix:NClick.Target>
               <uix:NClick.VerifyOptions>
                 <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
