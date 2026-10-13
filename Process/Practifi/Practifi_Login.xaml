@@ -45,6 +45,8 @@
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -104,7 +106,7 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Practifi_Login" sap:VirtualizedContainerService.HintSize="1556,2282" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Practifi_Login" sap:VirtualizedContainerService.HintSize="1240,2811" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="PractifiUsername" />
       <Variable x:TypeArguments="ss:SecureString" Name="PractifiPassword" />
@@ -115,13 +117,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;Altfest_PractifiCreds&quot;).ToString.Trim]" CacheStrategy="None" DisplayName="Get Credential" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString.Trim]" sap:VirtualizedContainerService.HintSize="1022,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[PractifiPassword]" Username="[PractifiUsername]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Login  Practifi" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,2084" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="dbec2c42-cd68-48d7-858c-fdbdf0a94cd0" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Edge Login  Practifi" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="1022,2613" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="dbec2c42-cd68-48d7-858c-fdbdf0a94cd0" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,1844" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="988,2373" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -148,6 +150,50 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
+            <uix:NCheckState DisplayName="Check App State 'Password'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="954,529" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="dbec2c42-cd68-48d7-858c-fdbdf0a94cd0" Version="V5">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,280" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log In'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,218" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dbec2c42-cd68-48d7-858c-fdbdf0a94cd0" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="practifi.cloudforce.com" CVScreenId="bb67bb92-1433-45e6-b0c2-f6569d1ba49a" DesignTimeRectangle="321, 550, 338, 43" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl id='Login' tag='INPUT' aaname='Log In' type='submit' /&gt;" Guid="178e6ba3-45af-4c2c-95f6-a590fc97e613" InformativeScreenshot="df7c26705b6194835527dc172c9f308f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login | Practifi' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="practifi.cloudforce.com" CVScreenId="ba090e78-31f6-40cd-995b-068b4621dc28" CvElementArea="320, 490, 341, 47" CvType="InputBox" DesignTimeRectangle="321, 492, 338, 43" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' aaname='Password' type='password' /&gt;" Guid="0c2ec68c-3772-472a-a2f9-4fa65ad85a98" InformativeScreenshot="6770349695c249d776ceb267462a34bc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login | Practifi' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="ba090e78-31f6-40cd-995b-068b4621dc28" DesignTimeRectangle="321, 469, 52, 15" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='login_form' tag='LABEL' aaname='Password' /&gt;" Guid="4cc80144-609a-4814-acaa-98c6197eaa7b" SearchSteps="Selector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="954,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="Simulate" IsPassword="True" ScopeIdentifier="dbec2c42-cd68-48d7-858c-fdbdf0a94cd0" SecureText="[PractifiPassword]" Version="V4">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="practifi.cloudforce.com" CVScreenId="5d7ede91-1e60-4b67-81ae-fd6789d5d5e3" DesignTimeRectangle="321, 491, 338, 43" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='password' tag='INPUT' aaname='Password' type='password' /&gt;" Guid="517ce8e8-a0fd-4237-a05f-2794797fb187" InformativeScreenshot="1023341253311e425d554b32827caaa0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Login | Practifi' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
@@ -256,7 +302,7 @@
         </ActivityAction>
       </uix:NApplicationCard.Body>
       <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJNSURBVFhH7ZY/aBRBFMY/kRAOCUEkSBAREREJIhZiIUHESiysrC3EwkKCiIiIiIVYBisL98MqSEoREbEQEREREbGS94mVWKWwEBGLkzc7l9zNTjYXcnvXpPg1O292vnnz/qHdbm8ZJUg/DJtNAasKAG0rqG2gtoOaBNXyb6ndRqkIAOUHT4J2GNR5UHdA3QbtHKhDvtZrpz2g9oHaDdoECq1LZI+A8ta2F9QVUF9BtVewf6C+gJoDtR/UUVDXQD0D9QnUE1CXQR1xz6UHrUYiQDtBPeg9uMISaK9Bfc6sOe9BnY3PNwFqOuLeqnhnWQCo8dLN9ifz0/XiAi+AugRqHrT56LnZ8pIrsdQtwIPtaeZng8RA3QV1oOONbgHu/qXMpiZ45MGbE/A7Y9wUN0CNdQvYEaM5NWyGIjzHdBAQi46n1tuKYbOciQKC+++D+pUxapKrKCuaebr8zRg0zZwLGAf1MbM4DE64gBaKkdz+OwpNAbRWZnEYXA9pGJ/gR8agQeyxd8+QAEFFmQEZw0Fj30DdAzXTadudNJwB9a66YYMU5r1lAbSHoG6COh1TvrcZxeHiOGgLA+sHRWhss6B5gfMZwyttXTsO1dAnm1NxEnLFHyo/rvIT1AtQr+KM8AbULVA+UbXSA1PyI1nh85+mYk9faz7wgDoG6mA81J8ze9scFQGJGJ9k/DbVLClrx/NQTKixdG+/1Aso3Bvmg8rJcrLRyxisi6Auxga2ppvrqBWwbFSmqrt1FwqffkMk+8zXl5vr6EtAk2wKGLmA/3gNTn9qqGsgAAAAAElFTkSuQmCC" InformativeScreenshot="20b853453b3e926fc4b265c4f5fab88b.jpg" Selector="&lt;html app='msedge.exe' title='Login | Practifi' /&gt;" Url="[in_Config(&quot;Altfest_PractifiLoginUrl&quot;).ToString.Trim]" Version="V1" />
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Edge" ContentHash="RjAkVU9ueEGWknHtLpE9mg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJNSURBVFhH7ZY/aBRBFMY/kRAOCUEkSBAREREJIhZiIUHESiysrC3EwkKCiIiIiIVYBisL98MqSEoREbEQEREREbGS94mVWKWwEBGLkzc7l9zNTjYXcnvXpPg1O292vnnz/qHdbm8ZJUg/DJtNAasKAG0rqG2gtoOaBNXyb6ndRqkIAOUHT4J2GNR5UHdA3QbtHKhDvtZrpz2g9oHaDdoECq1LZI+A8ta2F9QVUF9BtVewf6C+gJoDtR/UUVDXQD0D9QnUE1CXQR1xz6UHrUYiQDtBPeg9uMISaK9Bfc6sOe9BnY3PNwFqOuLeqnhnWQCo8dLN9ifz0/XiAi+AugRqHrT56LnZ8pIrsdQtwIPtaeZng8RA3QV1oOONbgHu/qXMpiZ45MGbE/A7Y9wUN0CNdQvYEaM5NWyGIjzHdBAQi46n1tuKYbOciQKC+++D+pUxapKrKCuaebr8zRg0zZwLGAf1MbM4DE64gBaKkdz+OwpNAbRWZnEYXA9pGJ/gR8agQeyxd8+QAEFFmQEZw0Fj30DdAzXTadudNJwB9a66YYMU5r1lAbSHoG6COh1TvrcZxeHiOGgLA+sHRWhss6B5gfMZwyttXTsO1dAnm1NxEnLFHyo/rvIT1AtQr+KM8AbULVA+UbXSA1PyI1nh85+mYk9faz7wgDoG6mA81J8ze9scFQGJGJ9k/DbVLClrx/NQTKixdG+/1Aso3Bvmg8rJcrLRyxisi6Auxga2ppvrqBWwbFSmqrt1FwqffkMk+8zXl5vr6EtAk2wKGLmA/3gNTn9qqGsgAAAAAElFTkSuQmCC" InformativeScreenshot="20b853453b3e926fc4b265c4f5fab88b.jpg" Reference="27R-X3_IDkupKuYK_uFSVg/GqXXHIH-s0uMegPL_waIEA" Selector="&lt;html app='msedge.exe' title='Login | Practifi' /&gt;" Url="[in_Config(&quot;Altfest_PractifiLoginUrl&quot;).ToString.Trim]" Version="V1" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
   </Sequence>
